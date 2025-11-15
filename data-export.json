@@ -1,0 +1,515 @@
+{
+  "users": [
+    {
+      "id": "cmfmsm8oz00003z037dt5jytw",
+      "email": "admin@crypto.com",
+      "telegram": null,
+      "password": "$2a$12$1A1480h5rVGEi6cQcfe2le7zwExjPwBY9AskPRAMEOiygFFuUDygO",
+      "token": "ADMIN-TOKEN-2024",
+      "role": "ADMIN",
+      "status": "ACTIVE",
+      "createdAt": 1758041667971,
+      "updatedAt": 1758041667971
+    },
+    {
+      "id": "cmfmsm8wb00013z039jo2m2dy",
+      "email": "test1@gmail.com",
+      "telegram": "@test1@gmail.com",
+      "password": "$2a$12$o.RrOv42dmqV/tBF3UPL3u1frdCZc1kDjJj2JA37TW1ib/b1QAgbq",
+      "token": "TOKEN-001-2024",
+      "role": "USER",
+      "status": "ACTIVE",
+      "createdAt": 1758041668235,
+      "updatedAt": 1758041855702
+    },
+    {
+      "id": "cmfmsm93s00023z03fez8m1y7",
+      "email": "temp-TOKEN-002-2024@example.com",
+      "telegram": null,
+      "password": "$2a$12$5dWfhSPrQyClaNUPGp05QOMSZ/8ABmvRdF7n.rXa28CiLZJcS.lZW",
+      "token": "TOKEN-002-2024",
+      "role": "USER",
+      "status": "PENDING",
+      "createdAt": 1758041668504,
+      "updatedAt": 1758041668504
+    },
+    {
+      "id": "cmfmsm9aw00033z03qcgko4s7",
+      "email": "temp-TOKEN-003-2024@example.com",
+      "telegram": null,
+      "password": "$2a$12$A8S8NkXpzx3EJ.kjtprA7OtH5ZAhbbfx1B.J6wOaDnPmhv7jUt7J2",
+      "token": "TOKEN-003-2024",
+      "role": "USER",
+      "status": "PENDING",
+      "createdAt": 1758041668761,
+      "updatedAt": 1758041668761
+    },
+    {
+      "id": "cmfmsm9i600043z03f3wlxx27",
+      "email": "temp-TOKEN-004-2024@example.com",
+      "telegram": null,
+      "password": "$2a$12$p1Rt/9HBFMpA1jnJ9akD6.N7JhmqVVl5XPOHoqpSMQUHAdjsAbqri",
+      "token": "TOKEN-004-2024",
+      "role": "USER",
+      "status": "PENDING",
+      "createdAt": 1758041669023,
+      "updatedAt": 1758041669023
+    },
+    {
+      "id": "cmfmsm9ph00053z033xs3kctm",
+      "email": "temp-TOKEN-005-2024@example.com",
+      "telegram": null,
+      "password": "$2a$12$xrFwOMUDuJbKyDzgpCial.wwaTkWowijSsxY1o/huTpM7cDZU7tLe",
+      "token": "TOKEN-005-2024",
+      "role": "USER",
+      "status": "PENDING",
+      "createdAt": 1758041669286,
+      "updatedAt": 1758041669286
+    },
+    {
+      "id": "cmfmtyf85000at1olk3jld8xo",
+      "email": "test2@gmail.com",
+      "telegram": "test2@gmail.com",
+      "password": "$2a$12$1rXy6/Nj8ZW52SLSTlobsOkm5JU6iUPc9oOe32fW.x9NpGbmo1PWq",
+      "token": "TOKEN-1758043915641-LTHQHW",
+      "role": "USER",
+      "status": "ACTIVE",
+      "createdAt": 1758043915926,
+      "updatedAt": 1758043953710
+    },
+    {
+      "id": "cmfnd125r000013gdlopebdqc",
+      "email": "temp-TOKEN-1758075951373-F5SBWH@example.com",
+      "telegram": null,
+      "password": "$2a$12$PKC5wbz5km9T8fH.NfKQwuxIAo2epxZJZy2nC2arH/xzZZOF2LdTS",
+      "token": "TOKEN-1758075951373-F5SBWH",
+      "role": "USER",
+      "status": "PENDING",
+      "createdAt": 1758075951663,
+      "updatedAt": 1758075951663
+    },
+    {
+      "id": "cmfnhqxfn00084y6lrdfksxmj",
+      "email": "test3@gmail.com",
+      "telegram": "test3@gmail.com",
+      "password": "$2a$12$rdOA5vUtAUUseyJN3wRB1uDjSPB3MjO3wxcKjRFDewuVjAz5VK2dC",
+      "token": "TOKEN-1758083876798-0C3OQ6",
+      "role": "USER",
+      "status": "ACTIVE",
+      "createdAt": 1758083877060,
+      "updatedAt": 1758085002795
+    },
+    {
+      "id": "cmfni2yk3000h4y6lrwdzhz2p",
+      "email": "temp-TOKEN-1758084438110-B90SU0@example.com",
+      "telegram": null,
+      "password": "$2a$12$qu3.y5RHR5CMJkCus4MiW.hnn3n7dcZWOspSFa3fNEgbSyZl6ekqu",
+      "token": "TOKEN-1758084438110-B90SU0",
+      "role": "USER",
+      "status": "PENDING",
+      "createdAt": 1758084438387,
+      "updatedAt": 1758084438387
+    },
+    {
+      "id": "cmfni6ko0000i4y6lgwxh984y",
+      "email": "temp-TOKEN-1758084606738-F3V1LB@example.com",
+      "telegram": null,
+      "password": "$2a$12$fhFfv9RDdXKpteMQCV5Rcu5UO/JwGrSyel.uTg2wrfw4anjGHmxSa",
+      "token": "TOKEN-1758084606738-F3V1LB",
+      "role": "USER",
+      "status": "PENDING",
+      "createdAt": 1758084607008,
+      "updatedAt": 1758084607008
+    }
+  ],
+  "wallets": [
+    {
+      "id": "cmfmu5aad000it1olqhc7b3jf",
+      "address": "dfgsdfgs",
+      "network": "TRC20",
+      "type": "RECEIVE",
+      "status": "ACTIVE",
+      "dailyLimit": null,
+      "monthlyLimit": null,
+      "balance": 2000,
+      "lastChecked": null,
+      "userId": "cmfmtyf85000at1olk3jld8xo",
+      "createdAt": 1758044236116,
+      "updatedAt": 1758044367767
+    },
+    {
+      "id": "cmfmwit6i00056l5goitgu5f1",
+      "address": "123123",
+      "network": "POLYGON",
+      "type": "RECEIVE",
+      "status": "ACTIVE",
+      "dailyLimit": null,
+      "monthlyLimit": null,
+      "balance": 0,
+      "lastChecked": null,
+      "userId": "cmfmsm8wb00013z039jo2m2dy",
+      "createdAt": 1758048226356,
+      "updatedAt": 1758048226356
+    },
+    {
+      "id": "cmfncn36s00074rwkajqzx5qw",
+      "address": "10000123123123",
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "ACTIVE",
+      "dailyLimit": null,
+      "monthlyLimit": null,
+      "balance": 0,
+      "lastChecked": null,
+      "userId": "cmfmsm8wb00013z039jo2m2dy",
+      "createdAt": 1758075299812,
+      "updatedAt": 1758075299812
+    },
+    {
+      "id": "cmfndqjy60003he5pjuasevzb",
+      "address": "5678910",
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "ACTIVE",
+      "dailyLimit": null,
+      "monthlyLimit": null,
+      "balance": 1000,
+      "lastChecked": null,
+      "userId": "cmfmsm8oz00003z037dt5jytw",
+      "createdAt": 1758077141119,
+      "updatedAt": 1758077606345
+    },
+    {
+      "id": "cmfnefctj0009he5p7z9nv8zw",
+      "address": "тестовы1",
+      "network": "TRC20",
+      "type": "RECEIVE",
+      "status": "ACTIVE",
+      "dailyLimit": null,
+      "monthlyLimit": null,
+      "balance": 1000,
+      "lastChecked": null,
+      "userId": "cmfmsm8oz00003z037dt5jytw",
+      "createdAt": 1758078298280,
+      "updatedAt": 1758078453201
+    },
+    {
+      "id": "cmfnh38kp00034y6lfk0x9wb5",
+      "address": "тест89789789798",
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "ACTIVE",
+      "dailyLimit": null,
+      "monthlyLimit": null,
+      "balance": 0,
+      "lastChecked": null,
+      "userId": "cmfmsm8oz00003z037dt5jytw",
+      "createdAt": 1758082771753,
+      "updatedAt": 1758082771753
+    },
+    {
+      "id": "cmfnhvz25000g4y6lisar524g",
+      "address": "еуывввфыв2131",
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "ACTIVE",
+      "dailyLimit": null,
+      "monthlyLimit": null,
+      "balance": 0,
+      "lastChecked": null,
+      "userId": "cmfnhqxfn00084y6lrdfksxmj",
+      "createdAt": 1758084112445,
+      "updatedAt": 1758084112445
+    }
+  ],
+  "walletRequests": [
+    {
+      "id": "cmfmsylz80001f80uuk3suem6",
+      "address": "123123",
+      "network": "POLYGON",
+      "type": "RECEIVE",
+      "status": "APPROVED",
+      "description": "Дневной лимит: 10000 USDT, Месячный лимит: 10000 USDT",
+      "createdAt": 1758042245059,
+      "updatedAt": 1758048226328,
+      "userId": "cmfmsm8wb00013z039jo2m2dy"
+    },
+    {
+      "id": "cmfmtbugc00054s0qtptdpyzg",
+      "address": "432344344535345354",
+      "network": "TRC20",
+      "type": "RECEIVE",
+      "status": "REJECTED",
+      "description": "Дневной лимит: 111111 USDT, Месячный лимит: 111111 USDT",
+      "createdAt": 1758042862572,
+      "updatedAt": 1758055534765,
+      "userId": "cmfmsm8wb00013z039jo2m2dy"
+    },
+    {
+      "id": "cmfmtf0z400094s0qqsyndelf",
+      "address": "test-address-123",
+      "network": "TRC20",
+      "type": "RECEIVE",
+      "status": "REJECTED",
+      "description": "Test wallet",
+      "createdAt": 1758043010992,
+      "updatedAt": 1758055532703,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    },
+    {
+      "id": "cmfmtuzl90005t1olqfkypawu",
+      "address": "123423lasndklfnkslad",
+      "network": "TRC20",
+      "type": "RECEIVE",
+      "status": "REJECTED",
+      "description": "Дневной лимит: 11111 USDT, Месячный лимит: 1111 USDT",
+      "createdAt": 1758043755693,
+      "updatedAt": 1758055530780,
+      "userId": "cmfmsm8wb00013z039jo2m2dy"
+    },
+    {
+      "id": "cmfmu0r6e000et1oltxjdb8k3",
+      "address": "kjsdhfjkasdhfakjhndsk",
+      "network": "POLYGON",
+      "type": "RECEIVE",
+      "status": "REJECTED",
+      "description": "Дневной лимит: 11111 USDT, Месячный лимит: 1111 USDT",
+      "createdAt": 1758044024727,
+      "updatedAt": 1758055528899,
+      "userId": "cmfmtyf85000at1olk3jld8xo"
+    },
+    {
+      "id": "cmfncltjj00034rwkboj6w2ov",
+      "address": "10000123123123",
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "APPROVED",
+      "description": "Тип: Для пополнения, Дневной лимит: 11111 USDT, Месячный лимит: 11111 USDT",
+      "createdAt": 1758075240656,
+      "updatedAt": 1758075299798,
+      "userId": "cmfmsm8wb00013z039jo2m2dy"
+    },
+    {
+      "id": "cmfndk9ro000159wg120gmgja",
+      "address": null,
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "APPROVED",
+      "description": "Тип: Для пополнения, Минимальная сумма: 123123 USDT, Максимальная сумма: 123123 USDT, Дневной лимит: 123123 USDT",
+      "createdAt": 1758076847989,
+      "updatedAt": 1758076873102,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    },
+    {
+      "id": "cmfndqa4y0001he5ph6ercmkv",
+      "address": null,
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "APPROVED",
+      "description": "Тип: Для пополнения, Минимальная сумма: 1234 USDT, Максимальная сумма: 1234 USDT, Дневной лимит: 1234 USDT",
+      "createdAt": 1758077128402,
+      "updatedAt": 1758077141111,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    },
+    {
+      "id": "cmfnef6lm0007he5p8sl1r39u",
+      "address": "тестовы1",
+      "network": "TRC20",
+      "type": "RECEIVE",
+      "status": "APPROVED",
+      "description": "Тип: Для приема, Дневной лимит: 1211111 USDT, Месячный лимит: 1211111 USDT",
+      "createdAt": 1758078290218,
+      "updatedAt": 1758078298275,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    },
+    {
+      "id": "cmfnh2v4x00014y6l7plkq902",
+      "address": null,
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "APPROVED",
+      "description": "Тип: Для пополнения, Минимальная сумма: 123132132 USDT, Максимальная сумма: 123132132 USDT, Дневной лимит: 123132132 USDT",
+      "createdAt": 1758082754337,
+      "updatedAt": 1758082771748,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    },
+    {
+      "id": "cmfnhs33z000c4y6l7s51za3v",
+      "address": null,
+      "network": "TRC20",
+      "type": "DEPOSIT",
+      "status": "APPROVED",
+      "description": "Тип: Для пополнения, Минимальная сумма: 1000 USDT, Максимальная сумма: 1000 USDT, Дневной лимит: 1000 USDT",
+      "createdAt": 1758083931071,
+      "updatedAt": 1758084112440,
+      "userId": "cmfnhqxfn00084y6lrdfksxmj"
+    }
+  ],
+  "payments": [],
+  "transactions": [
+    {
+      "id": "cmfmu83fn000kt1ols2xgg9dt",
+      "hash": "ADMIN-1758044367202-bavo6pj7m",
+      "type": "INCOMING",
+      "amount": 1000,
+      "balance": 1000,
+      "fromAddress": "ADMIN",
+      "toAddress": "dfgsdfgs",
+      "blockNumber": "ADMIN",
+      "gasUsed": "0",
+      "gasPrice": "0",
+      "fee": 0,
+      "status": "CONFIRMED",
+      "createdAt": 1758044367203,
+      "updatedAt": 1758044367203,
+      "walletId": "cmfmu5aad000it1olqhc7b3jf"
+    },
+    {
+      "id": "cmfmu843w000mt1ol0j3yj22o",
+      "hash": "ADMIN-1758044368075-5r3gjnpmh",
+      "type": "INCOMING",
+      "amount": 1000,
+      "balance": 2000,
+      "fromAddress": "ADMIN",
+      "toAddress": "dfgsdfgs",
+      "blockNumber": "ADMIN",
+      "gasUsed": "0",
+      "gasPrice": "0",
+      "fee": 0,
+      "status": "CONFIRMED",
+      "createdAt": 1758044368077,
+      "updatedAt": 1758044368077,
+      "walletId": "cmfmu5aad000it1olqhc7b3jf"
+    },
+    {
+      "id": "cmfne0ixa0005he5p0gwqyqsx",
+      "hash": "ADMIN-1758077606349-oqh4cd3jb",
+      "type": "INCOMING",
+      "amount": 1000,
+      "balance": 1000,
+      "fromAddress": "ADMIN",
+      "toAddress": "5678910",
+      "blockNumber": "ADMIN",
+      "gasUsed": "0",
+      "gasPrice": "0",
+      "fee": 0,
+      "status": "CONFIRMED",
+      "createdAt": 1758077606351,
+      "updatedAt": 1758077606351,
+      "walletId": "cmfndqjy60003he5pjuasevzb"
+    },
+    {
+      "id": "cmfneiod1000bhe5p4lgwwv2a",
+      "hash": "ADMIN-1758078453204-l4ii8qn57",
+      "type": "INCOMING",
+      "amount": 1000,
+      "balance": 1000,
+      "fromAddress": "ADMIN",
+      "toAddress": "тестовы1",
+      "blockNumber": "ADMIN",
+      "gasUsed": "0",
+      "gasPrice": "0",
+      "fee": 0,
+      "status": "CONFIRMED",
+      "createdAt": 1758078453205,
+      "updatedAt": 1758078453205,
+      "walletId": "cmfnefctj0009he5p7z9nv8zw"
+    }
+  ],
+  "networkPairs": [
+    {
+      "id": "pair-3",
+      "fromNetwork": "ERC20",
+      "toNetwork": "POLYGON",
+      "profitPercent": 1.8,
+      "isActive": 1,
+      "createdAt": 1758041667642,
+      "updatedAt": 1758041667642
+    },
+    {
+      "id": "pair-2",
+      "fromNetwork": "BEP20",
+      "toNetwork": "ERC20",
+      "profitPercent": 3.2,
+      "isActive": 1,
+      "createdAt": 1758041667642,
+      "updatedAt": 1758041667642
+    },
+    {
+      "id": "pair-1",
+      "fromNetwork": "TRC20",
+      "toNetwork": "BEP20",
+      "profitPercent": 2.5,
+      "isActive": 1,
+      "createdAt": 1758041667642,
+      "updatedAt": 1758041667642
+    },
+    {
+      "id": "pair-4",
+      "fromNetwork": "TRC20",
+      "toNetwork": "ERC20",
+      "profitPercent": 12.8,
+      "isActive": 1,
+      "createdAt": 1758041667642,
+      "updatedAt": 1758082644431
+    }
+  ],
+  "sessions": [
+    {
+      "id": "cmfmsq1zn000j10pkb26uggzh",
+      "token": "dyvqpssrjaq1cyuvd3qh8",
+      "expiresAt": 1758646645906,
+      "createdAt": 1758041845907,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    },
+    {
+      "id": "cmfmsqdti000l10pkyragdzw5",
+      "token": "cxedd4rjwrvsoa9zyoja8",
+      "expiresAt": 1758646661237,
+      "createdAt": 1758041861239,
+      "userId": "cmfmsm8wb00013z039jo2m2dy"
+    },
+    {
+      "id": "cmfmtg2xq000b4s0q2yc36i0i",
+      "token": "66eafd6561c2f7e7b5e2954261ec98853d71e4b9d65301709ef82ba317eabca6",
+      "expiresAt": 1758647860189,
+      "createdAt": 1758043060190,
+      "userId": "cmfmsm8wb00013z039jo2m2dy"
+    },
+    {
+      "id": "cmfmtlzic0001t1ol8nqj3yyy",
+      "token": "sp0t6lc39xrqp7mnj538s",
+      "expiresAt": 1758648135677,
+      "createdAt": 1758043335679,
+      "userId": "cmfmsm8wb00013z039jo2m2dy"
+    },
+    {
+      "id": "cmfmty1qb0009t1olgg146fae",
+      "token": "8a52qz46bdfiyirrlymgs",
+      "expiresAt": 1758648698434,
+      "createdAt": 1758043898436,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    },
+    {
+      "id": "cmfmu8mmf000ot1ol8u8rbcw1",
+      "token": "8u7a1nr3jvl8c3bsoy3u29",
+      "expiresAt": 1758649192069,
+      "createdAt": 1758044392071,
+      "userId": "cmfmtyf85000at1olk3jld8xo"
+    },
+    {
+      "id": "cmfnhqsjk00074y6lcb5k9jmr",
+      "token": "ov1c4q5zp6hfnlhrdn0gvu",
+      "expiresAt": 1758688670719,
+      "createdAt": 1758083870720,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    },
+    {
+      "id": "cmfnjl15v000114m21iu3cy00",
+      "token": "iaupzvvphib3clsinaxs9a",
+      "expiresAt": 1758691761182,
+      "createdAt": 1758086961184,
+      "userId": "cmfmsm8oz00003z037dt5jytw"
+    }
+  ]
+}

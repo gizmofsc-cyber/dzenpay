@@ -1,0 +1,232 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// SQLite doesn't support enums, using String instead
+
+model User {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  telegram  String?
+  password  String
+  token     String     @unique
+  role      String     @default("USER")
+  status    String     @default("PENDING")
+  insuranceDepositAmount Float? // Размер страхового депозита для пользователя
+  insuranceDepositPaid  Float  @default(0) // Оплаченный страховой депозит
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  // Relations
+  wallets       Wallet[]
+  payments      Payment[]
+  sessions      Session[]
+  supportTickets SupportTicket[]
+  walletRequests WalletRequest[]
+  depositRequests DepositRequest[]
+  receiveRequests ReceiveRequest[]
+  withdrawalRequests WithdrawalRequest[]
+  walletEarnings WalletEarning[]
+}
+
+model Wallet {
+  id          String       @id @default(cuid())
+  address     String?      // Может быть null для кошельков пополнения до назначения админом
+  network     String
+  type        String       @default("RECEIVE") // "DEPOSIT" (для пополнения, назначает админ) или "RECEIVE" (для приема, выбирает пользователь) или "WITHDRAWAL" (для вывода)
+  status      String       @default("ACTIVE") // "ACTIVE", "INACTIVE", "IN_WORK" (для кошельков вывода в работе)
+  dailyLimit  Float?
+  monthlyLimit Float?
+  balance     Float        @default(0)
+  lastChecked DateTime?
+  userId      String
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  // Relations
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  payments    Payment[]
+  transactions WalletTransaction[]
+  receiveRequests ReceiveRequest[]
+  withdrawalRequests WithdrawalRequest[]
+  earnings   WalletEarning[]
+}
+
+model NetworkPair {
+  id           String     @id @default(cuid())
+  fromNetworkId String
+  toNetworkId   String
+  profitPercent Float
+  isActive     Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  // Relations
+  payments Payment[]
+  fromNetwork Network @relation("FromNetwork", fields: [fromNetworkId], references: [id])
+  toNetwork   Network @relation("ToNetwork", fields: [toNetworkId], references: [id])
+}
+
+model Payment {
+  id            String        @id @default(cuid())
+  amount        Float
+  profit        Float
+  status        String        @default("PENDING")
+  transferTime  DateTime?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  // Relations
+  userId        String
+  walletId      String
+  networkPairId String
+
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wallet      Wallet      @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  networkPair NetworkPair @relation(fields: [networkPairId], references: [id])
+}
+
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model SupportTicket {
+  id        String   @id @default(cuid())
+  title     String
+  message   String
+  status    String   @default("open")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model WalletTransaction {
+  id          String   @id @default(cuid())
+  hash        String   @unique
+  type        String   // "INCOMING" or "OUTGOING"
+  amount      Float
+  balance     Float    // Balance after transaction
+  fromAddress String?
+  toAddress   String?
+  blockNumber String?
+  gasUsed     String?
+  gasPrice    String?
+  fee         Float    @default(0)
+  status      String   @default("CONFIRMED") // "PENDING", "CONFIRMED", "FAILED"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  walletId String
+  wallet   Wallet @relation(fields: [walletId], references: [id], onDelete: Cascade)
+}
+
+model WalletRequest {
+  id          String   @id @default(cuid())
+  address     String?  // Может быть null для кошельков пополнения
+  network     String
+  type        String   @default("RECEIVE") // "DEPOSIT" или "RECEIVE"
+  status      String   @default("PENDING") // "PENDING", "APPROVED", "REJECTED"
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model DepositRequest {
+  id          String   @id @default(cuid())
+  amount      Float
+  fromNetwork String   // Сеть для пополнения
+  toNetwork   String   // Сеть для перевода
+  status      String   @default("PENDING") // "PENDING", "PROCESSING", "COMPLETED", "CANCELLED"
+  adminWalletAddress String? // Адрес кошелька админа для пополнения
+  userWalletAddress  String? // Адрес кошелька пользователя для приема
+  transactionHash    String? // Хеш транзакции
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ReceiveRequest {
+  id          String   @id @default(cuid())
+  walletId    String   // ID кошелька пользователя для приема
+  status      String   @default("PENDING") // "PENDING", "READY", "PROCESSING", "COMPLETED"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wallet Wallet @relation(fields: [walletId], references: [id], onDelete: Cascade)
+}
+
+model WithdrawalRequest {
+  id          String   @id @default(cuid())
+  walletId    String   // ID кошелька для вывода
+  amount      Float    // Сумма для вывода
+  status      String   @default("PENDING") // "PENDING", "IN_WORK", "COMPLETED", "REJECTED"
+  paidAmount  Float    @default(0) // Уже выплаченная сумма
+  remainingAmount Float // Оставшаяся сумма к выплате
+  profit      Float?   // Доход пользователя
+  adminNotes  String?  // Заметки админа
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wallet Wallet @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  earnings WalletEarning[]
+}
+
+model WalletEarning {
+  id          String   @id @default(cuid())
+  walletId    String   // ID кошелька
+  amount      Float    // Сумма заработка
+  withdrawalRequestId String? // Связь с запросом на вывод
+  createdAt   DateTime @default(now())
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  wallet Wallet @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  withdrawalRequest WithdrawalRequest? @relation(fields: [withdrawalRequestId], references: [id])
+}
+
+model Network {
+  id          String   @id @default(cuid())
+  name        String   @unique // Название сети (TRC20, BEP20, etc.)
+  displayName String   // Отображаемое название
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  networkPairsFrom NetworkPair[] @relation("FromNetwork")
+  networkPairsTo   NetworkPair[] @relation("ToNetwork")
+}
