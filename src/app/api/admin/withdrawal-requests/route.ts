@@ -114,13 +114,14 @@ export async function PATCH(request: NextRequest) {
         break
 
       case 'REJECT':
-        // Возвращаем баланс пользователю
-        await prisma.user.update({
-          where: { id: withdrawalRequest.userId },
+        // Возвращаем баланс на кошелек пользователя
+        await prisma.wallet.update({
+          where: { id: withdrawalRequest.walletId },
           data: {
             balance: {
               increment: withdrawalRequest.amount
-            }
+            },
+            status: 'ACTIVE' // Возвращаем кошелек в активное состояние
           }
         })
 
@@ -135,12 +136,6 @@ export async function PATCH(request: NextRequest) {
             user: true,
             earnings: true
           }
-        })
-
-        // Возвращаем кошелек в активное состояние
-        await prisma.wallet.update({
-          where: { id: withdrawalRequest.walletId },
-          data: { status: 'ACTIVE' }
         })
         break
 
